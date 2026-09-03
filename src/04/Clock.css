@@ -1,0 +1,109 @@
+/* 전체 화면 */
+.clock-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+            radial-gradient(circle at top left, #1e3a8a 0%, transparent 35%),
+            radial-gradient(circle at bottom right, #312e81 0%, transparent 35%),
+            #080c18;
+
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+/* 시계 카드 */
+.clock-card {
+    width: 520px;
+    padding: 55px 60px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    transition: transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* 카드에 마우스 올렸을 때 */
+.clock-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+            0 35px 80px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* 작은 영문 타이틀 */
+.clock-label {
+    margin: 0 0 12px;
+
+    color: #60a5fa;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+/* 학과명 */
+.clock-card h1 {
+    margin: 0;
+
+    color: #f8fafc;
+
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* 구분선 */
+.clock-line {
+    width: 40px;
+    height: 2px;
+
+    margin: 30px auto;
+
+    background: linear-gradient(
+            90deg,
+            #60a5fa,
+            #818cf8
+    );
+
+    border-radius: 10px;
+}
+
+/* 현재 시각 문장 */
+.clock-card h2 {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* 실제 시간 */
+.clock-time {
+    display: block;
+
+    margin: 15px 0;
+
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 25px rgba(96, 165, 250, 0.35);
+}
