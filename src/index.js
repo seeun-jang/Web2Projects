@@ -4,23 +4,20 @@ import './index.css';
 //import App from './App';
 //import TodoListApp from "./01/TodoListApp";
 import reportWebVitals from './reportWebVitals';
-import Clock from "./04/Clock";
+// import Clock from "./04/Clock";
+// import BookList from "./05/exam02/BookList";
+
+import UserInfoList from "./05/exam03/UserinfoList";
+
 // import Library from "./03/enhanced_css/Library";
 // import "./03/enhanced_css/Book.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-setInterval(() => {
-        root.render(
-            <React.StrictMode>
-                <Clock/>
-            </React.StrictMode>
-        );
-    }, 1000
-)
+root.render(
+    <React.StrictMode>
+        <UserInfoList/>
+    </React.StrictMode>
+);
 
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
