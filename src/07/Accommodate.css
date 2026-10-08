@@ -1,0 +1,265 @@
+
+/* 전체 화면 */
+.prison-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background:
+            repeating-linear-gradient(
+                    0deg,
+                    transparent 0px,
+                    transparent 38px,
+                    rgba(255,255,255,0.015) 39px
+            ),
+            linear-gradient(135deg, #101820, #202a35);
+    font-family: 'Consolas', 'Malgun Gothic', monospace;
+    color: #e5e7eb;
+}
+
+/* 중앙 제어판 */
+.prison-panel {
+    width: 520px;
+    max-width: 100%;
+    padding: 28px;
+    background: #0c1118;
+    border: 1px solid #34414e;
+    border-radius: 14px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+}
+
+/* 상단 상태 표시 */
+.prison-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #34414e;
+    padding-bottom: 18px;
+}
+
+.prison-logo {
+    color: #f4c54c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.prison-online {
+    color: #34d399;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* 제목 */
+.prison-title {
+    padding: 28px 0 24px;
+}
+
+.prison-title span {
+    color: #8998a8;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.prison-title h1 {
+    color: #ffffff;
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.prison-title p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* 수용 인원 모니터 */
+.prison-monitor {
+    padding: 24px;
+    background: #151e27;
+    border: 1px solid #36424e;
+    border-radius: 10px;
+}
+
+.prison-monitor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: #aeb9c6;
+}
+
+.prison-status {
+    color: #34d399;
+    font-weight: bold;
+}
+
+.prison-status.full {
+    color: #fb7185;
+}
+
+/* 중앙 숫자 */
+.prison-count {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 14px;
+    margin: 30px 0;
+}
+
+.prison-count strong {
+    color: #f4c54c;
+    font-size: 86px;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.prison-count strong.count-full {
+    color: #fb7185;
+}
+
+.prison-count span {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* 10칸 수용 인원 표시 */
+.prison-cells {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+}
+
+.prison-cell {
+    height: 28px;
+    background: #34414e;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+.prison-cell.occupied {
+    background: #f4c54c;
+    box-shadow: 0 0 8px rgba(244,197,76,0.2);
+}
+
+.prison-cell.danger {
+    background: #fb7185;
+}
+
+.prison-capacity {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+/* 출입 버튼 */
+.prison-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.prison-buttons button {
+    flex: 1;
+    min-width: 0;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.prison-enter {
+    background: #f4c54c;
+    color: #111827;
+}
+
+.prison-enter:hover:not(:disabled) {
+    background: #ffd76c;
+    transform: translateY(-2px);
+}
+
+.prison-exit {
+    background: #293745;
+    color: #e2e8f0;
+    border: 1px solid #475569 !important;
+}
+
+.prison-exit:hover:not(:disabled) {
+    background: #394b5c;
+}
+
+.prison-buttons button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* 경고 및 시스템 상태 */
+.prison-alert {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 8px;
+    background: #15241f;
+    border-left: 4px solid #34d399;
+}
+
+.prison-alert strong {
+    color: #34d399;
+    font-size: 12px;
+}
+
+.prison-alert p {
+    color: #cbd5e1;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 10px 0 0;
+}
+
+.prison-alert-danger {
+    background: #301d25;
+    border-left-color: #fb7185;
+}
+
+.prison-alert-danger strong {
+    color: #fb7185;
+}
+
+/* 하단 */
+.prison-footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* 작은 화면 대응 */
+@media (max-width: 480px) {
+    .prison-panel {
+        padding: 20px;
+    }
+
+    .prison-title h1 {
+        font-size: 21px;
+    }
+
+    .prison-monitor {
+        padding: 16px;
+    }
+
+    .prison-count strong {
+        font-size: 65px;
+    }
+
+    .prison-buttons {
+        flex-direction: column;
+    }
+}
+
