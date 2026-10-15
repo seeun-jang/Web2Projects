@@ -1,0 +1,321 @@
+
+/* ===== NEXUS SECURITY ===== */
+
+.cb-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+
+    background:
+            radial-gradient(circle at 50% 20%, #1c274b, transparent 60%),
+            #080d19;
+
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+}
+
+.cb-page * {
+    box-sizing: border-box;
+}
+
+.cb-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+
+    background: rgba(17, 25, 43, 0.97);
+    border: 1px solid #2c3854;
+    border-radius: 24px;
+
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* HEADER */
+
+.cb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #29344b;
+}
+
+.cb-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.cb-brand-icon {
+    color: #9aaaff;
+    font-size: 27px;
+}
+
+.cb-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+
+    border-radius: 30px;
+    background: #293047;
+    color: #aeb9d3;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.cb-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.cb-badge.verified {
+    background: #153c35;
+    color: #4ce3b1;
+}
+
+/* MAIN */
+
+.cb-content {
+    text-align: center;
+    padding: 45px 0 30px;
+}
+
+.cb-icon {
+    width: 95px;
+    height: 95px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+    font-size: 55px;
+
+    background: linear-gradient(135deg, #34457d, #242e52);
+    color: #a7b5ff;
+
+    box-shadow: 0 0 35px #6476ff25;
+    transition: all 0.4s ease;
+}
+
+.cb-icon.approved {
+    background: #16463c;
+    color: #52eabc;
+    box-shadow: 0 0 40px #43e9b530;
+}
+
+.cb-label {
+    margin: 28px 0 12px;
+    color: #8798ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.cb-content h1 {
+    margin: 0 0 12px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.cb-description {
+    color: #8e9bb5;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* CONFIRM BUTTON */
+
+.cb-button {
+    margin-top: 32px;
+    width: 100%;
+    padding: 18px 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #798aff, #5365e5);
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px #6276ff40;
+    transition: all 0.3s ease;
+}
+
+.cb-button:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px #6276ff65;
+}
+
+.cb-button:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+.cb-button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+.cb-button.confirmed {
+    background: #153c35;
+    border: 1px solid #328e70;
+    color: #55eabb;
+
+    justify-content: center;
+    box-shadow: 0 0 30px #36e4a220;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* STATUS */
+
+.cb-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px;
+    background: #1b263c;
+    border: 1px solid #2c3851;
+    border-radius: 12px;
+}
+
+.cb-status span {
+    font-size: 10px;
+    color: #8f9eb8;
+    letter-spacing: 1px;
+}
+
+.cb-status strong {
+    font-size: 11px;
+    color: #aeb9cf;
+}
+
+.cb-status strong.success {
+    color: #4ce3b1;
+}
+
+/* FOOTER */
+
+.cb-footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #62728e;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    .cb-card {
+        padding: 22px;
+    }
+
+    .cb-content h1 {
+        font-size: 21px;
+    }
+
+    .cb-brand {
+        font-size: 10px;
+    }
+}
+
+
+/* ===== 버튼 잠금 해제 체크박스 ===== */
+
+.cb-unlock {
+    margin-top: 20px;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: #1b263c;
+    border: 1px solid #344362;
+    border-radius: 12px;
+
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.cb-unlock:hover {
+    border-color: #8292ff;
+    background: #222f4a;
+}
+
+.cb-unlock.inactive {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cb-unlock.inactive:hover {
+    border-color: #344362;
+    background: #1b263c;
+}
+
+.cb-unlock input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    accent-color: #798aff;
+    cursor: pointer;
+}
+
+.cb-unlock input:disabled {
+    cursor: not-allowed;
+}
+
+.cb-unlock-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cb-unlock-text strong {
+    font-size: 13px;
+    color: #e0e7ff;
+}
+
+.cb-unlock-text small {
+    font-size: 11px;
+    color: #8e9db8;
+}
+
+/* 체크 후 다시 활성화된 버튼 */
+
+.cb-button.confirmed.unlocked {
+    background: linear-gradient(135deg, #798aff, #5365e5);
+    color: #ffffff;
+    border: 1px solid #798aff;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px #6276ff40;
+}
+
+.cb-button.confirmed.unlocked:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px #6276ff65;
+}

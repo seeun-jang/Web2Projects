@@ -37,14 +37,18 @@ import reportWebVitals from './reportWebVitals';
 // import Toggle from "./08/Toggle";
 
 // 08 - 버튼 이벤트 실습
-import MyButton2 from "./08/MyButton2";
+// import MyButton2 from "./08/MyButton2";
+
+// 08 - ConfirmButton 실습
+// import ConfirmButton from "./08/ConfirmButton.jsx";
+
+// 08 - 메시지 전송 실습
+import MessageSender from "./08/MessageSender.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <MyButton2 />
+        <MessageSender />
     </React.StrictMode>
 );
-
-reportWebVitals();
