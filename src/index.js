@@ -34,15 +34,17 @@ import reportWebVitals from './reportWebVitals';
 // import Accommodate from "./07/Accommodate";
 
 // 08 - Toggle 실습
-import Toggle from "./08/Toggle";
+// import Toggle from "./08/Toggle";
+
+// 08 - 버튼 이벤트 실습
+import MyButton2 from "./08/MyButton2";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Toggle />
+        <MyButton2 />
     </React.StrictMode>
 );
 
 reportWebVitals();
-
