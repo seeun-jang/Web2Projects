@@ -31,13 +31,16 @@ import reportWebVitals from './reportWebVitals';
 // import TextInputWithFocusButton from "./07/TextInputWithFocusButton";
 
 // 07 - Custom Hook 실습
-import Accommodate from "./07/Accommodate";
+// import Accommodate from "./07/Accommodate";
+
+// 08 - Toggle 실습
+import Toggle from "./08/Toggle";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Accommodate />
+        <Toggle />
     </React.StrictMode>
 );
 
