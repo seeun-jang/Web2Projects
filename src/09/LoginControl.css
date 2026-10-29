@@ -1,0 +1,164 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 전체 화면 */
+.riot-page {
+    min-height: 100vh;
+    display: flex;
+    background: #111;
+}
+
+/* 오른쪽 롤 배경 */
+.riot-art {
+    flex: 1;
+    min-width: 0;
+    background-image: url("./riot-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 왼쪽 로그인 패널 */
+.riot-panel {
+    width: 400px;
+    flex-shrink: 0;
+    min-height: 100vh;
+    background: #fff;
+    padding: 32px 38px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 8px 0 30px #0002;
+    z-index: 1;
+}
+
+/* 상단 Toolbar */
+.riot-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #777;
+}
+
+.riot-toolbar button {
+    padding: 10px 16px;
+    background: #191919;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.riot-toolbar button:hover {
+    background: #d13639;
+}
+
+/* 로그인 콘텐츠 */
+.riot-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 라이엇 로고 */
+.riot-logo {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 45px;
+}
+
+.riot-content h1 {
+    font-size: 30px;
+    color: #202020;
+    margin: 0 0 12px;
+}
+
+.riot-content p {
+    font-size: 14px;
+    color: #888;
+    margin: 0 0 35px;
+}
+
+/* 로그인 폼 */
+.riot-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.riot-content input {
+    width: 100%;
+    padding: 17px;
+    background: #f5f5f5;
+    border: 2px solid #eee;
+    border-radius: 7px;
+    font-size: 13px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.riot-content input:focus {
+    background: #fff;
+    border-color: #d13639;
+}
+
+/* 로그인 버튼 */
+.riot-submit {
+    width: 100%;
+    padding: 17px;
+    margin-top: 20px;
+    background: #d13639;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.riot-submit:hover {
+    background: #b72429;
+    transform: translateY(-2px);
+}
+
+/* 로그인 완료 */
+.riot-welcome span {
+    color: #219653;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* 하단 */
+.riot-footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+/* 모바일 */
+@media (max-width: 650px) {
+    .riot-panel {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .riot-art {
+        display: none;
+    }
+}

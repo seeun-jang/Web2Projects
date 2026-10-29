@@ -1,0 +1,67 @@
+.security-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000, #0f2e0f);
+    font-family: Arial, sans-serif;
+}
+
+.security-card {
+    width: 430px;
+    max-width: 90%;
+    background: #111;
+    border: 2px solid #32cd32;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(50, 205, 50, 0.3);
+}
+
+.security-card h1 {
+    color: #7fff00;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.security-card p {
+    color: #b6ffb6;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.security-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #32cd32;
+}
+
+.warning-banner {
+    background: #1a0000;
+    color: red;
+    border: 2px solid red;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.security-card button {
+    width: 100%;
+    padding: 14px;
+    background: #32cd32;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.security-card button:hover {
+    background: #7fff00;
+}

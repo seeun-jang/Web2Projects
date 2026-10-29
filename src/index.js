@@ -43,12 +43,31 @@ import reportWebVitals from './reportWebVitals';
 // import ConfirmButton from "./08/ConfirmButton.jsx";
 
 // 08 - 메시지 전송 실습
-import MessageSender from "./08/MessageSender.jsx";
+// import MessageSender from "./08/MessageSender.jsx";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// 09 - 조건부 렌더링 실습
+// import Greeting from "./09/Greeting";
+
+// 09 - 엘리먼트 변수 실습
+// import LoginControl from "./09/LoginControl";
+
+// 09 - 인라인 조건 실습
+// import Mailbox from "./09/Mailbox";
+
+// 09 - 컴포넌트 렌더링 막기
+// import MainPage from "./09/MainPage";
+
+// 09 - Toolbar 실습 (RIOT GAMES)
+import LoginControl from "./09/LoginControl";
+
+const root = ReactDOM.createRoot(
+    document.getElementById("root")
+);
 
 root.render(
     <React.StrictMode>
-        <MessageSender />
+        <LoginControl />
     </React.StrictMode>
 );
+
+reportWebVitals();
